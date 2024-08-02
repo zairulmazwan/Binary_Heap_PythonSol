@@ -109,7 +109,6 @@ class Heap:
 
 
     def descending_order(self):
-        heap_data = self.copy_heap()
         res = [0]*self.size
 
         resize = len(res)
@@ -135,7 +134,7 @@ class Heap:
 
         return res
 
-    def create_heap_tree(self, data):
+    def create_max_heap(self, data):
         for i in data:
             self.insert(i)
 
@@ -150,8 +149,8 @@ class Heap:
         return res
 
     def print_heap(self):
-        for i in self.heap:
-            print(i, end=" ")
+        for i in range(self.size):
+            print(self.heap[i], end=" ")
 
 
     def print_list(self, data):
